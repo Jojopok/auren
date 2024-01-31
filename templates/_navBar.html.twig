@@ -1,0 +1,25 @@
+<nav class="navbar">
+    <div class="burger-menu-btn" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="navbar-left">
+        <ul>
+            <li> <a href="{#{{ path('') }}#}">Parcourir les décisions</a></li>
+            <li> <a href="{#{{ path('') }}#}">Mes décisions</a></li>
+            <li> <a href="{#{{ path('') }}#}">Groupes</a></li>
+            <li> <a href="{#{{ path('') }}#}">Créer une décision</a></li>
+        </ul>
+    </div>
+    <div class="navbar-right">
+        <i class="fa-solid fa-user burger-menu"></i>
+    </div>
+</nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const burgerBtn = document.querySelector('.burger-menu-btn');
+        const navbarLeft = document.querySelector('.navbar-left');
+        burgerBtn.addEventListener('click', function () {
+            navbarLeft.classList.toggle('show'); // Ajoute ou retire la classe 'show' pour afficher ou cacher la navigation
+        });
+    });
+</script>
