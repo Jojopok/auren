@@ -8,6 +8,7 @@ import './bootstrap.js';
 import './styles/picture.css';
 import './styles/order.css';
 import "./styles/navBar.css";
+import "./styles/homePage.css";
 import './styles/app.css';
 
 
