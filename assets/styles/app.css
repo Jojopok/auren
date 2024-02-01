@@ -1,5 +1,3 @@
-
-
 :root {
     --color-one: #FFF;
     --color-two: #000;
@@ -18,6 +16,8 @@
 }
 /* Usage example */
 body {
+    margin: 0;
+    padding: 0;
     background-color: var(--color-one);
     font-family: var(--font-text);
 }
