@@ -1,48 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Picture index{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-    <h1>Ajouter/Modifier/Suprimer des images</h1>
+    <div style="display: flex">
+        <div class="container-img">
 
-    <p>1 = Illustration Digital</p>
-    <p>2 = Illustration Traditionelle</p>
-    <p>3 = Graphisme</p>
+            {% for picture in pictures %}
+                <div>
+                    <div class="square-container">
+                        <img src="{{ picture.url }}" alt="{{ picture.description }}">
+                    </div>
+                </div>
+            {% endfor %}
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom de l'image</th>
-                <th>Url</th>
-                <th>Description</th>
-                <th>Type d'image</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for picture in pictures %}
-            <tr>
-                <td>{{ picture.id }}</td>
-                <td>{{ picture.name }}</td>
-                <td>{{ picture.url }}</td>
-                <td>{{ picture.description }}</td>
-                <td>{{ picture.product }}</td>
-                <td>
-                {% if picture.url %}
-                    <img src="{{ picture.url }}" alt="{{ picture.description }}" style="max-width: 100px; max-height: 100px;">
-                {% else %}
-                    No Image
-                {% endif %}
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_picture_new') }}">Create new</a>
+        </div>
+    </div>
 {% endblock %}

@@ -1,27 +1,26 @@
 <div class="navbar">
-    <div class="burger-menu" onclick="toggleNavbar()">
+    <div class="burger-menu" id="burgerMenu" onclick="toggleNavbar()">
         <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="navbar-center">
+        <div class="navbar-brand">AUREN</div>
     </div>
     <div class="navbar-links" id="navbarLinks">
         <a href="{{ path('app_home') }}">ACCUEIL</a>
         <a href="{{ path('app_picture_digital') }}">ILLUSTRATION DIGITALE</a>
         <a href="{{ path('app_picture_show_traditionelle') }}">ILLUSTRATION TRADITIONELLE</a>
         <a href="{{ path('app_picture_show_graphisme') }}">GRAPHISME</a>
-        <a href="{#{{ path('commission') }}#}">COMISSION</a>
+        <a href="{#{{ path('commission') }}#}">COMMISSION</a>
         <a href="{#{{ path('contact') }}#}">CONTACT</a>
     </div>
     <div class="envelope-button">
-        <button></button>
+        <i class="fa-regular fa-envelope"></i>
     </div>
 </div>
 
 <script>
-function toggleNavbar() {
-    const navbarLinks = document.getElementById("navbarLinks");
-    if (navbarLinks.style.display === "block") {
-        navbarLinks.style.display = "none";
-    } else {
-        navbarLinks.style.display = "block";
+    function toggleNavbar() {
+        let navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("active");
     }
-}
 </script>
