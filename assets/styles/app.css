@@ -11,6 +11,11 @@
     --size-little: 0.8rem;
     --font-text: "Raleway, Arial, sans-serif";
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
 /* Usage example */
 body {
     background-color: var(--color-one);

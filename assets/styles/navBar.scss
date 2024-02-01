@@ -1,13 +1,15 @@
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: var(--color-one);
     padding: 15px;
 }
+
+
 
 .navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: var(--color-one);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -18,12 +20,8 @@
     cursor: pointer;
 }
 
-.burger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
+.burger-menu > i {
+    color: var(--color-one);
 }
 
 @media screen and (max-width: 600px) {

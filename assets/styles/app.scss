@@ -1,5 +1,10 @@
 @import "navBar";
 
+* {
+    margin:0;
+    padding:0;
+}
+
 :root {
     --color-one: #FFF;
     --color-two: #000;
@@ -15,4 +20,44 @@
 body {
     background-color: var(--color-one);
     font-family: var(--font-text);
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: var(--color-one);
+    padding: 15px;
+}
+
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: var(--color-one);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-menu > i {
+    color: var(--color-one);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .envelope-button {
+        display: none;
+    }
 }
