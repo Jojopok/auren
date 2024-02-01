@@ -47,6 +47,33 @@ class PictureFixtures extends Fixture
 ',
                 'product' => '1',
             ],
+            [
+                'name' => 'test1',
+                'description' => 'test1',
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7PRGL3ifjY7tJAv12bxcxjW9J4Ts6aLxt2q_WSZEah7-ogfnHlHd07dw2C0VCw9zKgw5LPFvLNvhGs7sA2JpOXdzcWjX_1sreBHG14pU7C3xqTvyD-7FgN_W8SJ8RFgdpvI02RIpFBfS786lSQSd1mkjt_mXteheof-FDW_DKfIFyTgHksCkrImps9o4/s881/IMG_20231001_131325_612.jpg
+',
+                'product' => '2',
+            ],
+            [
+                'name' => 'test1',
+                'description' => 'test1',
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwHHRVa5do7Yep9nC8rbj6zJshJAXf0okP6dwlxqR7sXydFb3tbfotIalPKrsXhtmglGWZTHJSPaabyQymLznExjqJoxRf6krmy7vzGszaF_MZ-GqpRGKCkuGByZJCYH8af44mdMOe4u5J8FxLVdxRYFJf0kn5yg25CWCKIaeJ07VHxrcG6tdJRdWhKP4/s1631/IMG_20231010_152322.jpg
+',
+                'product' => '2',
+            ],
+            [
+                'name' => 'test1',
+                'description' => 'test1',
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmIIFSjcsYi9BOtDK36g6efEmbSPyzElRW6xTE43jhj90F_TTRq-IYXpG-WThYVq4APRmAzS9fsV_iJm-e96kz4h2IBYo2xxPpUZt_Q6exdoQpvXG28ntHZpltXW2N7NxFuHzF7YoVn8eiD6o9P1T0U6S8HIQAhxFCuTTaZ9VL7ed2atbEluKax739Rnc/s897/IMG_20231011_130641.jpg
+',
+                'product' => '2',
+            ],            [
+                'name' => 'test1',
+                'description' => 'test1',
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmIIFSjcsYi9BOtDK36g6efEmbSPyzElRW6xTE43jhj90F_TTRq-IYXpG-WThYVq4APRmAzS9fsV_iJm-e96kz4h2IBYo2xxPpUZt_Q6exdoQpvXG28ntHZpltXW2N7NxFuHzF7YoVn8eiD6o9P1T0U6S8HIQAhxFCuTTaZ9VL7ed2atbEluKax739Rnc/s897/IMG_20231011_130641.jpg
+',
+                'product' => '2',
+            ],
         ];
         foreach ($pictureData as $pictureDataItem) {
             $picture = new Picture();
