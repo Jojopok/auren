@@ -30,6 +30,9 @@ class Order
     #[ORM\ManyToOne(inversedBy: 'orders')]
     private ?Format $format = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $state = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -91,6 +94,18 @@ class Order
     public function setFormat(?Format $format): static
     {
         $this->format = $format;
+
+        return $this;
+    }
+
+    public function isState(): ?bool
+    {
+        return $this->state;
+    }
+
+    public function setState(?bool $state): static
+    {
+        $this->state = $state;
 
         return $this;
     }

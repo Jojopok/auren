@@ -7,7 +7,11 @@
         <div class="container-img">
 
             {% for picture in pictures %}
-                <div><div><img src="{{ picture.url }}" alt="{{ picture.description }}"></div></div>
+                <div>
+                    <div class="square-container">
+                        <img src="{{ picture.url }}" alt="{{ picture.description }}">
+                    </div>
+                </div>
             {% endfor %}
 
         </div>

@@ -7,10 +7,10 @@
     </div>
     <div class="navbar-links" id="navbarLinks">
         <a href="{{ path('app_home') }}">ACCUEIL</a>
-        <a href="{{ path('app_picture_digital') }}">ILLUSTRATION DIGITALE</a>
-        <a href="{{ path('app_picture_show_traditionelle') }}">ILLUSTRATION TRADITIONELLE</a>
-        <a href="{{ path('app_picture_show_graphisme') }}">GRAPHISME</a>
-        <a href="{#{{ path('commission') }}#}">COMMISSION</a>
+        <a href="{{ path('app_picture_show_by_product', {'product': 'digital'}) }}">ILLUSTRATION DIGITALE</a>
+        <a href="{{ path('app_picture_show_by_product', {'product': 'traditionnelle'}) }}">ILLUSTRATION TRADITIONNELLE</a>
+        <a href="{{ path('app_picture_show_by_product', {'product': 'graphisme'}) }}">GRAPHISME</a>
+        <a href="{{ path('app_order_new') }}">COMMISSION</a>
         <a href="{#{{ path('contact') }}#}">CONTACT</a>
     </div>
     <div class="envelope-button">
