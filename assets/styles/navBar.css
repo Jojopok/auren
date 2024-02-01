@@ -1,41 +1,58 @@
 .navbar {
-    overflow: hidden;
     background-color: var(--color-two);
-    padding: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap; /* Ajout de cette ligne pour permettre le retour à la ligne */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger-menu > i {
+    color: var(--color-one);
+}
+
+.envelope-button > i {
+    color: var(--color-one);
 }
 
 .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    color: var(--color-one);
+    padding: 0.5rem;
     text-decoration: none;
 }
 
-.burger-menu {
+.navbar.active {
+    height: auto;
+}
+
+.navbar-center {
+    color: var(--color-one);
+    flex-grow: 1;
+    text-align: center;
+    order: 2; /* Ajout de cette ligne pour ajuster l'ordre d'affichage */
+    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
     display: none;
-    cursor: pointer;
+    order: 3; /* Ajout de cette ligne pour ajuster l'ordre d'affichage */
+    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
 }
 
-.burger-menu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
+/* Ajustement pour aligner les liens à gauche */
+.navbar.active .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-@media screen and (max-width: 600px) {
-    .navbar a {
-        display: none;
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
-    .envelope-button {
-        display: none;
-    }
+.navbar.active .navbar-links a {
+    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+    box-sizing: border-box; /* Ajout de cette ligne pour inclure le padding dans la largeur */
+    text-align: left; /* Ajout de cette ligne pour aligner le texte à gauche */
 }
