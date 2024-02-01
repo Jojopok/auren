@@ -6,6 +6,7 @@ import './bootstrap.js';
  * which should already be in your base.html.twig.
  */
 import './styles/picture.css';
+import './styles/order.css';
 import "./styles/navBar.css";
 import './styles/app.css';
 
