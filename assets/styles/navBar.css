@@ -18,6 +18,10 @@
     cursor: pointer;
 }
 
+.burger-menu > i {
+    color: var(--color-one)
+}
+
 .burger-menu .bar {
     width: 25px;
     height: 3px;
