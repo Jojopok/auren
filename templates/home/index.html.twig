@@ -1,7 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}AUREN{% endblock %}
 
 {% block body %}
-<p>Hello World</p>
+    <div class="home-page-container">
+        <div class="photo-head">
+            <div>
+                <button onclick="window.location.href='{{ path('app_order_new') }}'" class="order-button">
+                    COMMANDEZ
+                </button>
+            </div>
+            <div class="home-box">
+                <div class="photo-box">
+                    <div class="title-box">
+                        <p> QUI SUIS-JE </p>
+                    </div>
+                    <div class="text-box">
+                        <p>
+                            Auren Artiste de 25 ans, passioné d’histoire de
+                            l’Art et de l’univer manga. Son univer se base
+                            autour de son amour pour les différents mythes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

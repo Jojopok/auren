@@ -22,6 +22,7 @@
  }
 
 body {
+    margin-top: 8rem;
     background-color: var(--color-one);
     font-family: var(--font-text);
 }

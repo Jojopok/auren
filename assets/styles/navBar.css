@@ -1,14 +1,24 @@
 .navbar {
     background-color: var(--color-two);
     padding: 1.5rem;
+    width: 100%;
     display: flex;
     flex-wrap: wrap; /* Ajout de cette ligne pour permettre le retour à la ligne */
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.envelope-button > i {
+    margin-right: 3rem;
+    font-size: 2rem;
 }
 
 .burger-menu > i {
     color: var(--color-one);
+    font-size: 2rem;
 }
 
 .envelope-button > i {
@@ -29,8 +39,6 @@
     color: var(--color-one);
     flex-grow: 1;
     text-align: center;
-    order: 2; /* Ajout de cette ligne pour ajuster l'ordre d'affichage */
-    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
 }
 
 .navbar-brand {
