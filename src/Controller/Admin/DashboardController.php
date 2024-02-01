@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Format;
+use App\Entity\Order;
 use App\Entity\Picture;
 use Doctrine\ORM\Mapping\Entity;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -28,6 +30,8 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Image', 'fa-regular fa-image', Picture::class);
+        yield MenuItem::linkToCrud('Commission', 'fa-solid fa-money-bill', Order::class);
+        yield MenuItem::linkToCrud('Format', 'fa-solid fa-folder', Format::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }

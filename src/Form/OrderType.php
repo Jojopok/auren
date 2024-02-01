@@ -20,7 +20,7 @@ class OrderType extends AbstractType
             ->add('picture')
             ->add('format', EntityType::class, [
                 'class' => Format::class,
-'choice_label' => 'id',
+'choice_label' => 'name',
             ])
         ;
     }
