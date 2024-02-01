@@ -9,10 +9,12 @@
     --size-little: 0.8rem;
     --font-text: "Raleway, Arial, sans-serif";
 }
-/* Usage example */
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
 body {
-    margin: 0;
-    padding: 0;
     background-color: var(--color-one);
     font-family: var(--font-text);
 }
