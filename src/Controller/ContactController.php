@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/contact')]
 class ContactController extends AbstractController
@@ -41,7 +42,7 @@ class ContactController extends AbstractController
             'form' => $form,
         ]);
     }
-
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}', name: 'app_contact_show', methods: ['GET'])]
     public function show(Contact $contact): Response
     {
@@ -49,7 +50,7 @@ class ContactController extends AbstractController
             'contact' => $contact,
         ]);
     }
-
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}/edit', name: 'app_contact_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Contact $contact, EntityManagerInterface $entityManager): Response
     {
@@ -67,7 +68,7 @@ class ContactController extends AbstractController
             'form' => $form,
         ]);
     }
-
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}', name: 'app_contact_delete', methods: ['POST'])]
     public function delete(Request $request, Contact $contact, EntityManagerInterface $entityManager): Response
     {

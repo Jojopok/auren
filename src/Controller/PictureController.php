@@ -43,33 +43,27 @@ class PictureController extends AbstractController
         ]);
     }
 
-    #[Route('/digital', name: 'app_picture_digital', methods: ['GET'])]
-    public function digital(PictureRepository $pictureRepository): Response
+    #[Route('/{product}', name: 'app_picture_show_by_product', methods: ['GET'])]
+    public function showByProduct(PictureRepository $pictureRepository, string $product): Response
     {
-        $pictures = $pictureRepository->findBy(['product' => 1]);
+        $productType = strtolower($product);
+
+        switch ($productType) {
+            case 'digital':
+                $pictures = $pictureRepository->findBy(['product' => 1]);
+                break;
+            case 'traditionnelle':
+                $pictures = $pictureRepository->findBy(['product' => 2]);
+                break;
+            case 'graphisme':
+                $pictures = $pictureRepository->findBy(['product' => 3]);
+                break;
+            default:
+        }
 
         return $this->render('picture/digital.html.twig', [
             'pictures' => $pictures,
-        ]);
-    }
-
-    #[Route('/traditionelle', name: 'app_picture_show_traditionelle', methods: ['GET'])]
-    public function traditionelle(PictureRepository $pictureRepository): Response
-    {
-        $pictures = $pictureRepository->findBy(['product' => 2]);
-
-        return $this->render('picture/traditionelle.html.twig', [
-            'pictures' => $pictures,
-        ]);
-    }
-
-    #[Route('/graphisme', name: 'app_picture_show_graphisme', methods: ['GET'])]
-    public function graphisme(PictureRepository $pictureRepository): Response
-    {
-        $pictures = $pictureRepository->findBy(['product' => 3]);
-
-        return $this->render('picture/graphisme.html.twig', [
-            'pictures' => $pictures,
+            'productType' => $productType,
         ]);
     }
 
@@ -100,6 +94,7 @@ class PictureController extends AbstractController
         ]);
     }
 
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}', name: 'app_picture_delete', methods: ['POST'])]
     public function delete(Request $request, Picture $picture, EntityManagerInterface $entityManager): Response
     {

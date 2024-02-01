@@ -16,7 +16,7 @@ class Picture
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 400)]
     private ?string $url = null;
 
     #[ORM\Column(length: 255)]

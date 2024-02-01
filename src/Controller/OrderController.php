@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/comission')]
 class OrderController extends AbstractController
@@ -49,7 +50,7 @@ class OrderController extends AbstractController
             'order' => $order,
         ]);
     }
-
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}/edit', name: 'app_order_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Order $order, EntityManagerInterface $entityManager): Response
     {
@@ -67,7 +68,7 @@ class OrderController extends AbstractController
             'form' => $form,
         ]);
     }
-
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}', name: 'app_order_delete', methods: ['POST'])]
     public function delete(Request $request, Order $order, EntityManagerInterface $entityManager): Response
     {

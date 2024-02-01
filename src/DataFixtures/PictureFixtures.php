@@ -70,9 +70,22 @@ class PictureFixtures extends Fixture
             ],            [
                 'name' => 'test1',
                 'description' => 'test1',
-                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmIIFSjcsYi9BOtDK36g6efEmbSPyzElRW6xTE43jhj90F_TTRq-IYXpG-WThYVq4APRmAzS9fsV_iJm-e96kz4h2IBYo2xxPpUZt_Q6exdoQpvXG28ntHZpltXW2N7NxFuHzF7YoVn8eiD6o9P1T0U6S8HIQAhxFCuTTaZ9VL7ed2atbEluKax739Rnc/s897/IMG_20231011_130641.jpg
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfGY_5Lp8pDHVvfLwXm-HgstemE4Cq5Ad1NgVE4hAN92ISml9AJALu5GeTdLdckoGAL06rlBF1-KPX7k4fF_vm6iSj0CUOxS_irYBhWAQBy6mNgg-iE3lovDeoxikywve3Ohq_qqPiey5iffsGiusZdDthzu1Q9thTerJeopx5r1A0nUea4jTd4vIzgIs/s2084/Banniere_event_facebook_BQ.png
 ',
-                'product' => '2',
+                'product' => '3',
+            ],
+            [
+                'name' => 'test1',
+                'description' => 'test1',
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtrJQzTNmzYbOqeICc98EQVH-uZx7wxFkq3YSyIh9OJhoPDRrZccLcNnTxXTFechxGYgoyt10JvpI6UmKmC-RzuS_lZHGsEYLJtCx4Y7t5ZXETXEVx-LKNx2xNd4Z7oSehBcDuuwO4hOkNWK_LybU5Za8nHvLNYsLWoySj7J7MaWE6xKHWk5OLb2WPtrM/s2084/Banniere_event_facebook_BLINDTEST.png
+',
+                'product' => '3',
+            ],[
+                'name' => 'test1',
+                'description' => 'test1',
+                'url' => 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF1pJpRJV_4Z28xiGbN_R88j4Si0SwMX_H5li5uCfXjGT-gYabjXcdhCWDCNeVs-Rulc2e8ZO3Sdu3fq5EiXpuAJUL3IrZiw5_G0hkJijSMSkUllNiH2Wx39yesQB4ODVayp_DLsAaw6Av4cZ6EHKcsb3qATlk4crlInpQCtJR7BpYbHMXbd4RaVL1NnM/s2034/darts-jadore-logo.jpg
+',
+                'product' => '3',
             ],
         ];
         foreach ($pictureData as $pictureDataItem) {
