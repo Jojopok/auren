@@ -31,7 +31,7 @@ class Order
     private ?Format $format = null;
 
     #[ORM\Column(nullable: true)]
-    private ?bool $state = null;
+    private ?bool $state = false;
 
     public function getId(): ?int
     {
