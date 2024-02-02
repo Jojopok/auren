@@ -92,6 +92,7 @@
 }
 
 .tiktok {
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -154,6 +155,10 @@
     font-size: 2rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .square-container {
         width: 9rem;
@@ -161,39 +166,44 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .photo-head {
         height: 80vh;
     }
 
     .photo-head > div > button {
         margin-top: 33rem;
-        padding: 3rem 10rem;
+        padding: 3rem 6rem;
         font-size: 5rem;
     }
 
     .photo-box {
-        width: 85vh;
-        height: 85vh;
+        width: 60rem;
+        height: 60rem;
     }
 
     .photo-box-digital {
-        width: 85vh;
-        height: 85vh;
+        width: 60rem;
+        height: 60rem;
     }
 
     .photo-box-tradi {
-        width: 85vh;
-        height: 85vh;
+        width: 60rem;
+        height: 60rem;
     }
 
     .photo-box-graphisme {
-        width: 85vh;
-        height: 85vh;
+        width: 60rem;
+        height: 60rem;
     }
 
     .tiktok {
-        width: 85vh;
-        height: 15vh;
+        width: 60rem;
+        height: 8rem;
+    }
+
+    .instagram {
+        width: 60rem;
+        height: 8rem;
     }
 }
