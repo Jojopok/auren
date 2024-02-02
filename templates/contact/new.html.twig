@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Contact{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block body %}
-    <h1>Create new Contact</h1>
+<div class="commission-title">
+    <h1>CONTACT</h1>
+</div>
 
     {{ include('contact/_form.html.twig') }}
 
-    <a href="{{ path('app_contact_index') }}">back to list</a>
 {% endblock %}

@@ -7,10 +7,38 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse; /* Inverser l'ordre vertical */
+    align-items: center;
+}
+
+
+.footer-content .copyright {
+    display: flex;
+    justify-content: space-between; /* Ajout de cette ligne pour aligner à gauche et à droite */
+    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+}
+
+.footer-content .left,
+.footer-content .right {
+    flex: 1; /* Ajout de cette ligne pour que chaque partie occupe une partie égale de l'espace disponible */
 }
 
 .footer-content p {
     color: white;
     margin: 0;
+}
+
+.center > a > p {
+    font-size: 3rem;
+    margin: 3rem;
+}
+
+.copyright {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    .center > a > p {
+        font-size: 1.5rem;
+    }
 }

@@ -11,7 +11,7 @@
     z-index: 1000;
 }
 
-.envelope-button > i {
+.envelope-button > a > i {
     margin-right: 3rem;
     font-size: 2rem;
 }
