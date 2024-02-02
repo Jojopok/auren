@@ -11,10 +11,12 @@
         <a href="{{ path('app_picture_show_by_product', {'product': 'traditionnelle'}) }}">ILLUSTRATION TRADITIONNELLE</a>
         <a href="{{ path('app_picture_show_by_product', {'product': 'graphisme'}) }}">GRAPHISME</a>
         <a href="{{ path('app_order_new') }}">COMMISSION</a>
-        <a href="{#{{ path('contact') }}#}">CONTACT</a>
+        <a href="{{ path('app_contact_new') }}">CONTACT</a>
     </div>
     <div class="envelope-button">
+        <a href="{{ path('app_contact_new') }}">
         <i class="fa-regular fa-envelope"></i>
+        </a>
     </div>
 </div>
 
