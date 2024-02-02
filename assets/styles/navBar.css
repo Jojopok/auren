@@ -64,3 +64,25 @@
     box-sizing: border-box; /* Ajout de cette ligne pour inclure le padding dans la largeur */
     text-align: left; /* Ajout de cette ligne pour aligner le texte à gauche */
 }
+
+a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: whitesmoke;
+    transition: 0.4s width;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
