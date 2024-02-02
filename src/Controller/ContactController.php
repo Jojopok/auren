@@ -15,6 +15,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[Route('/contact')]
 class ContactController extends AbstractController
 {
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/', name: 'app_contact_index', methods: ['GET'])]
     public function index(ContactRepository $contactRepository): Response
     {

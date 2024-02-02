@@ -15,6 +15,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[Route('/comission')]
 class OrderController extends AbstractController
 {
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/', name: 'app_order_index', methods: ['GET'])]
     public function index(OrderRepository $orderRepository): Response
     {
@@ -42,7 +43,7 @@ class OrderController extends AbstractController
             'form' => $form,
         ]);
     }
-
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/{id}', name: 'app_order_show', methods: ['GET'])]
     public function show(Order $order): Response
     {

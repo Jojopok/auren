@@ -15,6 +15,7 @@ use Symfony\Component\Security\Http\Attribute\IsGranted;
 #[Route('/illustration')]
 class PictureController extends AbstractController
 {
+    #[IsGranted('ROLE_ADMIN')]
     #[Route('/', name: 'app_picture_index', methods: ['GET'])]
     public function index(PictureRepository $pictureRepository): Response
     {
@@ -22,6 +23,7 @@ class PictureController extends AbstractController
             'pictures' => $pictureRepository->findAll(),
         ]);
     }
+    #[IsGranted('ROLE_ADMIN')]
 
     #[Route('/new', name: 'app_picture_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
