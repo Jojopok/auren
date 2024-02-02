@@ -1,0 +1,209 @@
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-head {
+    width: 100%;
+    height: 35rem;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjb4oG7vL9qW7OoxNeg8siojl7-4qx1qLGkIAz-tWHCpRnpgKNOFPM3DBE2Q5Iv2dFWlG9pAqDE0WU751FMSDgP18Re7wrUrsuuEGQ17EtQ_Gm6AmzJwFfKF5LAzuhVelbh9tXbjwFwFUmorNdPVPmnTraMpLmDnbvOLnLHAgIOPDzfhJ7_ZWNFdh4Sc_o/s2160/IMG_1994.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-head > div {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-head > div > button {
+    margin-top: 27rem;
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.home-box {
+    margin-top: 3.5rem;
+}
+
+.photo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    height: 25rem;
+    background-image: url("https://i.ibb.co/gdY5CGn/peter.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-two);
+}
+
+.photo-box-digital {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    height: 25rem;
+    background-image: url("https://i.ibb.co/yPtCWmT/colibry.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-two);
+}
+
+.photo-box-tradi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    height: 25rem;
+    background-image: url("https://i.ibb.co/Fhf7Dz5/Capture-d-cran-2024-01-31-102405.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-two);
+}
+
+.photo-box-graphisme {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    height: 25rem;
+    background-image: url("https://i.ibb.co/WcHspyX/2021-05-18-14.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-two);
+}
+
+.instagram {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    height: 5rem;
+    background-image: url("https://i.ibb.co/vxdw6vm/insta.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-two);
+}
+
+.tiktok {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25rem;
+    height: 5rem;
+    background-image: url("https://i.ibb.co/gFQbJwX/tiktok.png");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-two);
+}
+
+.text-box-reseaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+    text-align: center;
+    height: 100%;
+}
+
+.text-box-reseaux > p {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.text-box-reseaux > p > i {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 0.5rem;
+}
+
+.title-box > p {
+    color: white;
+    font-size: 2rem;
+}
+
+.text-box {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Fond noir transparent */
+    text-align: center
+}
+
+.title-up-box {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.title-up-box > h2 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .square-container {
+        width: 9rem;
+        height: 9rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .photo-head {
+        height: 80vh;
+    }
+
+    .photo-head > div > button {
+        margin-top: 33rem;
+        padding: 3rem 6rem;
+        font-size: 5rem;
+    }
+
+    .photo-box {
+        width: 60rem;
+        height: 60rem;
+    }
+
+    .photo-box-digital {
+        width: 60rem;
+        height: 60rem;
+    }
+
+    .photo-box-tradi {
+        width: 60rem;
+        height: 60rem;
+    }
+
+    .photo-box-graphisme {
+        width: 60rem;
+        height: 60rem;
+    }
+
+    .tiktok {
+        width: 60rem;
+        height: 8rem;
+    }
+
+    .instagram {
+        width: 60rem;
+        height: 8rem;
+    }
+}

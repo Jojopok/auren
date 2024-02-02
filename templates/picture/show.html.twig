@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div style="display: flex">
+        <div class="container-img">
+
+            {% for picture in pictures %}
+                <div>
+                    <div class="square-container">
+                        <img src="{{ picture.url }}" alt="{{ picture.description }}">
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

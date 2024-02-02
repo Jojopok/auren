@@ -1,0 +1,88 @@
+.navbar {
+    background-color: var(--color-two);
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Ajout de cette ligne pour permettre le retour à la ligne */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.envelope-button > a > i {
+    margin-right: 3rem;
+    font-size: 2rem;
+}
+
+.burger-menu > i {
+    color: var(--color-one);
+    font-size: 2rem;
+}
+
+.envelope-button > i {
+    color: var(--color-one);
+}
+
+.navbar a {
+    color: var(--color-one);
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+.navbar.active {
+    height: auto;
+}
+
+.navbar-center {
+    color: var(--color-one);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: none;
+    order: 3; /* Ajout de cette ligne pour ajuster l'ordre d'affichage */
+    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+}
+
+/* Ajustement pour aligner les liens à gauche */
+.navbar.active .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar.active .navbar-links a {
+    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+    box-sizing: border-box; /* Ajout de cette ligne pour inclure le padding dans la largeur */
+    text-align: left; /* Ajout de cette ligne pour aligner le texte à gauche */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: whitesmoke;
+    transition: 0.4s width;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}

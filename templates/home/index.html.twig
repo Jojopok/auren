@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AUREN{% endblock %}
+
+{% block body %}
+    <div class="home-page-container">
+        <div class="photo-head">
+            <div>
+                <button onclick="window.location.href='{{ path('app_order_new') }}'" class="order-button">
+                    COMMANDEZ
+                </button>
+            </div>
+        </div>
+            <div class="home-box">
+                <div class="photo-box">
+                    <div class="title-box">
+                        <p> QUI SUIS-JE </p>
+                    </div>
+                    <div class="text-box">
+                        <p>
+                            Auren Artiste de 25 ans, passioné d’histoire de
+                            l’Art et de l’univer manga. Son univer se base
+                            autour de son amour pour les différents mythes
+                        </p>
+                    </div>
+                </div>
+
+                <div class="title-up-box">
+                    <h2>ILLUSTRATION DIGITALE</h2>
+                </div>
+
+                <a href="{{ path('app_picture_show_by_product', {'product': 'digital'}) }}">
+                <div class="photo-box-digital">
+                    <div class="title-box">
+                        <p> </p>
+                    </div>
+                    <div class="text-box">
+                        <p>
+                            Découvrir mes oeuvres digital
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+                <div class="title-up-box">
+                    <h2>ILLUSTRATION TRADI</h2>
+                </div>
+                <a href="{{ path('app_picture_show_by_product', {'product': 'traditionnelle'}) }}">
+                <div class="photo-box-tradi">
+                    <div class="title-box">
+                        <p> </p>
+                    </div>
+                    <div class="text-box">
+                        <p>
+                            Découvrir mes oeuvres traditionelle
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+                <div class="title-up-box">
+                    <h2>GRAPHISME</h2>
+                </div>
+
+                <a href="{{ path('app_picture_show_by_product', {'product': 'graphisme'}) }}">
+                <div class="photo-box-graphisme">
+                    <div class="title-box">
+                        <p> </p>
+                    </div>
+                    <div class="text-box">
+                        <p>
+                            Découvrir mes designs
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+                <div class="title-up-box">
+                    <h2>ME SUIVRE</h2>
+                </div>
+
+                <a href="https://www.instagram.com/_auren_/?hl=fr_">
+                <div class="instagram">
+                    <div class="text-box-reseaux">
+                        <p>
+                            <i class="fa-brands fa-instagram"></i>
+                            INSTAGRAM
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+                <a href="https://www.tiktok.com/@__auren__">
+                <div class="tiktok">
+                    <div class="text-box-reseaux">
+                        <p>
+                            <i class="fa-brands fa-tiktok"></i>
+                            TIKTOK
+                        </p>
+                    </div>
+                </div>
+                </a>
+            </div>
+    </div>
+{% endblock %}

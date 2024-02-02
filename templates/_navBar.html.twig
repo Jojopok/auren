@@ -1,0 +1,28 @@
+<div class="navbar">
+    <div class="burger-menu" id="burgerMenu" onclick="toggleNavbar()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="navbar-center">
+        <div class="navbar-brand">AUREN</div>
+    </div>
+    <div class="navbar-links" id="navbarLinks">
+        <a href="{{ path('app_home') }}">ACCUEIL</a>
+        <a href="{{ path('app_picture_show_by_product', {'product': 'digital'}) }}">ILLUSTRATION DIGITALE</a>
+        <a href="{{ path('app_picture_show_by_product', {'product': 'traditionnelle'}) }}">ILLUSTRATION TRADITIONNELLE</a>
+        <a href="{{ path('app_picture_show_by_product', {'product': 'graphisme'}) }}">GRAPHISME</a>
+        <a href="{{ path('app_order_new') }}">COMMISSION</a>
+        <a href="{{ path('app_contact_new') }}">CONTACT</a>
+    </div>
+    <div class="envelope-button">
+        <a href="{{ path('app_contact_new') }}">
+        <i class="fa-regular fa-envelope"></i>
+        </a>
+    </div>
+</div>
+
+<script>
+    function toggleNavbar() {
+        let navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("active");
+    }
+</script>

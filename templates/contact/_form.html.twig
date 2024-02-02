@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+<div class="commission-box">
+    {{ form_label(form.name) }}
+    {{ form_widget(form.name) }}
+    {{ form_errors(form.name) }}
+
+    {{ form_label(form.email) }}
+    {{ form_widget(form.email) }}
+    {{ form_errors(form.email) }}
+
+    {{ form_label(form.description) }}
+    {{ form_widget(form.description) }}
+    {{ form_errors(form.description) }}
+    <button class="btn btn-commission">{{ button_label|default('ENVOYER') }}</button>
+</div>
+{{ form_end(form) }}

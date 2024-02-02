@@ -1,0 +1,48 @@
+.commission-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commission-box > label {
+    margin-top: 1rem;
+}
+
+.commission-box > input {
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid var(--color-two);
+}
+
+.commission-box > textarea {
+    width: 20rem;
+    height: 10rem;
+    border: 1px solid var(--color-two);
+}
+
+.commission-box > select {
+    width: 20rem;
+    height: 3rem;
+    border: 1px solid var(--color-two);
+}
+
+.commission-box > select option {
+    font-size: 1.25rem;
+}
+
+.commission-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+}
+
+.btn-commission {
+    width: 12rem;
+    height: 3rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: var(--color-one);
+    background-color: var(--color-two);
+    font-size: 1.3rem;
+}
