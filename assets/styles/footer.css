@@ -3,6 +3,8 @@ footer {
     background-color: var(--color-two);
     padding: 5rem 0.25rem;
     text-align: center;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer-content {
