@@ -25,4 +25,13 @@
         let navbar = document.querySelector(".navbar");
         navbar.classList.toggle("active");
     }
+
+    document.addEventListener('click', function(event) {
+        let isClickInside = document.querySelector('.navbar').contains(event.target);
+        let navbar = document.querySelector(".navbar");
+
+        if (!isClickInside && navbar.classList.contains('active')) {
+            navbar.classList.remove('active');
+        }
+    });
 </script>

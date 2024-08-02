@@ -44,11 +44,19 @@ class PictureController extends AbstractController
             'form' => $form,
         ]);
     }
+    #[Route('/show-full/{id}', name: 'app_picture_show_full', methods: ['GET'])]
+    public function showFull(Picture $picture): Response
+    {
+        return $this->render('picture/show_full.html.twig', [
+            'picture' => $picture,
+        ]);
+    }
 
     #[Route('/{product}', name: 'app_picture_show_by_product', methods: ['GET'])]
     public function showByProduct(PictureRepository $pictureRepository, string $product): Response
     {
         $productType = strtolower($product);
+        $pictures = []; // Initialise $pictures à un tableau vide
 
         switch ($productType) {
             case 'digital':
@@ -61,6 +69,7 @@ class PictureController extends AbstractController
                 $pictures = $pictureRepository->findBy(['product' => 3]);
                 break;
             default:
+                // Gérer le cas par défaut ici
         }
 
         return $this->render('picture/digital.html.twig', [
@@ -72,7 +81,7 @@ class PictureController extends AbstractController
     #[Route('/{id}', name: 'app_picture_show_id', methods: ['GET'])]
     public function show(Picture $picture): Response
     {
-        return $this->render('picture/show.html.twig', [
+        return $this->render('picture/show_full.html.twig', [
             'picture' => $picture,
         ]);
     }
