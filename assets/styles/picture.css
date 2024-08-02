@@ -20,9 +20,25 @@
     object-fit: cover;
 }
 
+.full-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.full-image-container img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+
 @media (max-width: 768px) {
     .square-container {
         width: 9rem;
         height: 9rem;
     }
+
+
 }

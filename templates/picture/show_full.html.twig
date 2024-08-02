@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="full-image-container">
+        <img src="{{ picture.url }}" alt="{{ picture.description }}">
+
+    <p>{{ picture.description }}</p>
+    <button class="btn btn-commission" onclick="window.history.back()">Retour</button>
+    </div>
+{% endblock %}

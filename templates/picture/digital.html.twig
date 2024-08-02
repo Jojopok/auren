@@ -9,10 +9,13 @@
             {% for picture in pictures %}
                 <div>
                     <div class="square-container">
-                        <img src="{{ picture.url }}" alt="{{ picture.description }}">
+                        <a href="{{ path('app_picture_show_full', {'id': picture.id}) }}">
+                            <img src="{{ picture.url }}" alt="{{ picture.description }}">
+                        </a>
                     </div>
                 </div>
             {% endfor %}
+
 
         </div>
     </div>
