@@ -1,0 +1,7 @@
+.login-container {
+    margin-top: 10rem; /* Ajustez cette valeur en fonction de la hauteur de votre navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

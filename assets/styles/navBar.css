@@ -3,7 +3,7 @@
     padding: 1.5rem;
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Ajout de cette ligne pour permettre le retour à la ligne */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     position: fixed;
