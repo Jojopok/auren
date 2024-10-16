@@ -21,6 +21,11 @@
      font-weight: bold;
  }
 
+ .fat {
+     font-weight: bold;
+     font-size: 3rem;
+ }
+
 body {
     display: flex;
     flex-direction: column;

@@ -1,31 +1,27 @@
 footer {
-    width: 100%;
     margin-top: 2rem;
     background-color: var(--color-two);
     padding: 5rem 0.25rem;
     text-align: center;
-    /*
-    position: absolute;
-    */
     bottom:0;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column-reverse; /* Inverser l'ordre vertical */
+    flex-direction: column-reverse;
     align-items: center;
 }
 
 
 .footer-content .copyright {
     display: flex;
-    justify-content: space-between; /* Ajout de cette ligne pour aligner à gauche et à droite */
-    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+    justify-content: space-between;
+    width: 100%;
 }
 
 .footer-content .left,
 .footer-content .right {
-    flex: 1; /* Ajout de cette ligne pour que chaque partie occupe une partie égale de l'espace disponible */
+    flex: 1;
 }
 
 .footer-content p {
@@ -40,6 +36,10 @@ footer {
 
 .copyright {
     display: flex;
+}
+
+.footer-privacy-link, .footer-legal-link {
+    color: white;
 }
 
 @media (max-width: 900px) {

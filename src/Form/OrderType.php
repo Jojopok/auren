@@ -6,6 +6,7 @@ use App\Entity\Format;
 use App\Entity\Order;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -30,6 +31,10 @@ class OrderType extends AbstractType
             ])
             ->add('picture',null,[
                 'label' => 'URL POUR RÉFÉRENCE',
+            ])
+            ->add('acceptPrivacyPolicy', CheckboxType::class, [
+                'label' => false,
+                'required' => true,
             ])
         ;
     }

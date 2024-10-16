@@ -26,6 +26,7 @@
 }
 
 .navbar a {
+    font-size: 1.5rem;
     color: var(--color-one);
     padding: 0.5rem;
     text-decoration: none;
@@ -48,11 +49,11 @@
 
 .navbar-links {
     display: none;
-    order: 3; /* Ajout de cette ligne pour ajuster l'ordre d'affichage */
-    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
+    order: 3;
+    width: 100%;
 }
 
-/* Ajustement pour aligner les liens à gauche */
+
 .navbar.active .navbar-links {
     display: flex;
     flex-direction: column;
@@ -60,9 +61,9 @@
 }
 
 .navbar.active .navbar-links a {
-    width: 100%; /* Ajout de cette ligne pour occuper toute la largeur */
-    box-sizing: border-box; /* Ajout de cette ligne pour inclure le padding dans la largeur */
-    text-align: left; /* Ajout de cette ligne pour aligner le texte à gauche */
+    width: 100%;
+    box-sizing: border-box;/
+    text-align: left;
 }
 
 a {
@@ -74,7 +75,7 @@ a {
 a:after {
     content: '';
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: -1px;
     width: 0;
     height: 2px;
@@ -84,5 +85,15 @@ a:after {
 
 a:hover:after {
     width: 100%;
-    left: 0;
+}
+
+@media (max-width: 600px) {
+    .navbar a {
+        font-size: 3rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .navbar {
+        padding: 2rem; /* Augmente la hauteur de la navbar */
+    }
 }

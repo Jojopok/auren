@@ -27,6 +27,9 @@ class Order
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $picture = null;
 
+    #[ORM\Column(type: "boolean")]
+    private ?bool $acceptPrivacyPolicy = null;
+
     #[ORM\ManyToOne(inversedBy: 'orders')]
     private ?Format $format = null;
 
@@ -106,6 +109,18 @@ class Order
     public function setState(?bool $state): static
     {
         $this->state = $state;
+
+        return $this;
+    }
+
+    public function getAcceptPrivacyPolicy(): ?bool
+    {
+        return $this->acceptPrivacyPolicy;
+    }
+
+    public function setAcceptPrivacyPolicy(?bool $acceptPrivacyPolicy): self
+    {
+        $this->acceptPrivacyPolicy = $acceptPrivacyPolicy;
 
         return $this;
     }

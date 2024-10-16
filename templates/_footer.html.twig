@@ -1,17 +1,19 @@
 <footer>
-<div class="footer-content">
-    <div class="copyright">
-        <div class="left">
-            <p>@ 2024 - JOJOPOKTV</p>
+    <div class="footer-content">
+        <div class="copyright">
+            <div class="left">
+                <p>@ 2024 - JOJOPOKTV</p>
+                <a href="{{ path('app_privacy') }}" target="_blank" class="privacy-link footer-privacy-link">Politique de confidentialité</a>
+                <a href="{{ path('app_mentions_legales') }}" target="_blank" class="legal-link footer-legal-link">Mentions légales</a>
+            </div>
+            <div class="right">
+                <p>@_auren_</p>
+            </div>
         </div>
-        <div class="right">
-            <p>@_auren_</p>
+        <div class="center">
+            <a href="{{ path('app_contact_new') }}" class="contact-link fat">
+                CONTACTEZ MOI
+            </a>
         </div>
     </div>
-    <div class="center">
-        <a href="{{ path('app_contact_new') }}">
-        <p>CONTACTEZ MOI</p>
-        </a>
-    </div>
-</div>
 </footer>

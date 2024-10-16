@@ -46,3 +46,12 @@
     background-color: var(--color-two);
     font-size: 1.3rem;
 }
+
+.form-check {
+    display: flex;
+    align-items: center;
+}
+
+.privacy-link {
+    color: black;
+}
