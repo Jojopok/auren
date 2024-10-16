@@ -38,6 +38,10 @@ footer {
     display: flex;
 }
 
+.footer-privacy-link, .footer-legal-link {
+    color: white;
+}
+
 @media (max-width: 900px) {
     .center > a > p {
         font-size: 1.5rem;
