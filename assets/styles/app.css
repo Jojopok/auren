@@ -48,6 +48,6 @@ main {
 
 @media (max-width: 768px) {
     p {
-        font-size: 1.2rem; /* Adjust the size as needed */
+        font-size: 1.2rem;
     }
 }
