@@ -12,7 +12,7 @@
             </div>
         </div>
             <div class="home-box">
-                <div class="photo-box">
+                <div class="photo-box hidden">
                     <div class="title-box">
                         <p> QUI SUIS-JE </p>
                     </div>
@@ -25,12 +25,12 @@
                     </div>
                 </div>
 
-                <div class="title-up-box">
+                <div class="title-up-box hidden">
                     <h2>ILLUSTRATION DIGITALE</h2>
                 </div>
 
                 <a href="{{ path('app_picture_show_by_product', {'product': 'digital'}) }}">
-                <div class="photo-box-digital">
+                <div class="photo-box-digital hidden">
                     <div class="title-box">
                         <p> </p>
                     </div>
@@ -42,11 +42,11 @@
                 </div>
                 </a>
 
-                <div class="title-up-box">
+                <div class="title-up-box hidden">
                     <h2>ILLUSTRATION TRADI</h2>
                 </div>
                 <a href="{{ path('app_picture_show_by_product', {'product': 'traditionnelle'}) }}">
-                <div class="photo-box-tradi">
+                <div class="photo-box-tradi hidden">
                     <div class="title-box">
                         <p> </p>
                     </div>
@@ -58,12 +58,12 @@
                 </div>
                 </a>
 
-                <div class="title-up-box">
+                <div class="title-up-box hidden">
                     <h2>GRAPHISME</h2>
                 </div>
 
                 <a href="{{ path('app_picture_show_by_product', {'product': 'graphisme'}) }}">
-                <div class="photo-box-graphisme">
+                <div class="photo-box-graphisme hidden">
                     <div class="title-box">
                         <p> </p>
                     </div>
@@ -75,12 +75,12 @@
                 </div>
                 </a>
 
-                <div class="title-up-box">
+                <div class="title-up-box hidden">
                     <h2>ME SUIVRE</h2>
                 </div>
 
                 <a href="https://www.instagram.com/_auren_/?hl=fr_">
-                <div class="instagram">
+                <div class="instagram hidden">
                     <div class="text-box-reseaux">
                         <p>
                             <i class="fa-brands fa-instagram"></i>
@@ -91,7 +91,7 @@
                 </a>
 
                 <a href="https://www.tiktok.com/@__auren__">
-                <div class="tiktok">
+                <div class="tiktok hidden">
                     <div class="text-box-reseaux">
                         <p>
                             <i class="fa-brands fa-tiktok"></i>
@@ -102,4 +102,21 @@
                 </a>
             </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    } else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach(el => observer.observe(el));
+        });
+    </script>
 {% endblock %}
