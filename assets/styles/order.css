@@ -67,16 +67,16 @@
     .commission-box > select {
         width: 70%;
         height: auto;
-        font-size: 1.2rem; /* Augmente la taille du texte */
+        font-size: 1.2rem;
     }
 
     .btn-commission {
 
         height: auto;
-        font-size: 1.2rem; /* Augmente la taille du texte */
+        font-size: 1.2rem;
     }
 
     .commission-box > label {
-        font-size: 1.2rem; /* Augmente la taille du texte des labels */
+        font-size: 1.2rem;
     }
 }
