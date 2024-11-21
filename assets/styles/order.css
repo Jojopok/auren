@@ -55,3 +55,28 @@
 .privacy-link {
     color: black;
 }
+
+.commission-title p {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .commission-box > input,
+    .commission-box > textarea,
+    .commission-box > select {
+        width: 70%;
+        height: auto;
+        font-size: 1.2rem; /* Augmente la taille du texte */
+    }
+
+    .btn-commission {
+
+        height: auto;
+        font-size: 1.2rem; /* Augmente la taille du texte */
+    }
+
+    .commission-box > label {
+        font-size: 1.2rem; /* Augmente la taille du texte des labels */
+    }
+}
