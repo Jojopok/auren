@@ -61,6 +61,34 @@
 }
 
 
+.custom-checkbox {
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.custom-label {
+    margin-top: 15px;
+    font-size: 1.3em;
+    margin-left: 10px; /* Espacement entre la case et le texte */
+    vertical-align: middle; /* Aligner le texte avec la case */
+}
+
+/* Ajuster le lien */
+.custom-label .privacy-link {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    text-decoration: underline;
+
+}
+.custom-label .privacy-link:hover {
+    margin-top: 15px;
+    color: #0056b3; /* Couleur au survol */
+}
+
+
 @media (max-width: 768px) {
     .commission-box > input,
     .commission-box > textarea,
