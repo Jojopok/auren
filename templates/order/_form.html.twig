@@ -22,8 +22,8 @@
     {{ form_errors(form.picture) }}
 
     <div class="form-check">
-        {{ form_widget(form.acceptPrivacyPolicy) }}
-        <label for="{{ form.acceptPrivacyPolicy.vars.id }}">
+        {{ form_widget(form.acceptPrivacyPolicy, { 'attr': { 'class': 'custom-checkbox' } }) }}
+        <label for="{{ form.acceptPrivacyPolicy.vars.id }}" class="custom-label">
             J'accepte la <a href="{{ path('app_privacy') }}" class="privacy-link" target="_blank">politique de confidentialité</a>
         </label>
         {{ form_errors(form.acceptPrivacyPolicy) }}
