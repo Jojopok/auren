@@ -52,6 +52,17 @@
     max-height: 80%;
 }
 
+.glightbox .gslide-image img {
+    max-width: 90vw; /* Limite la largeur maximale à 90% de la largeur de la fenêtre */
+    max-height: 90vh; /* Limite la hauteur maximale à 90% de la hauteur de la fenêtre */
+    object-fit: contain; /* S'assure que l'image est toujours visible en entier */
+}
+
+.square-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 @media (max-width: 768px) {
     .square-container {

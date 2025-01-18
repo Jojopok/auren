@@ -9,10 +9,12 @@
             {% for picture in pictures %}
                 <div>
                     <div class="square-container">
-                        <a href="{{ path('app_picture_show_full', {'id': picture.id}) }}">
-                            <img src="{{ picture.url }}" alt="{{ picture.description }}">
-                            <div class="img-description">{{ picture.description }}</div>
-                        </a>
+                        <img src="{{ picture.url }}"
+                             class="glightbox"
+                             data-gallery="gallery1"
+                             data-title="{{ picture.description }}"
+                             data-src="{{ picture.url }}"
+                             alt="{{ picture.description }}">
                     </div>
                 </div>
             {% endfor %}
