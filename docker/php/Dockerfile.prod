@@ -1,0 +1,47 @@
+FROM php:8.3-fpm-alpine as base
+
+# Install PHP extensions
+RUN apk add --no-cache \
+        bash \
+        git \
+        unzip \
+        libzip-dev \
+        icu-dev \
+        oniguruma-dev \
+        libpng-dev \
+        libjpeg-turbo-dev \
+        freetype-dev \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install \
+        intl \
+        pdo \
+        pdo_mysql \
+        opcache \
+        zip
+
+# Install Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy app source
+COPY . .
+
+# ✅ Rendre Git "safe" (sinon composer bloque)
+RUN git config --global --add safe.directory /var/www/html
+
+# ✅ Définir l'environnement AVANT composer install
+ENV APP_ENV=prod
+ENV APP_DEBUG=0
+
+# ✅ Installer les dépendances sans dev
+RUN composer install --no-dev --optimize-autoloader --prefer-dist
+
+# ✅ Nettoyer et préparer le cache Symfony
+RUN php bin/console cache:clear --env=prod && php bin/console cache:warmup --env=prod
+
+# ✅ Droits sur var/ (pour prod simple)
+RUN chmod -R 777 var
+
+CMD ["php-fpm"]
