@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile.prod
+    volumes:
+      - .:/var/www/html:rw
+    depends_on:
+      - database
+
+  nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html:rw
+      - ./docker/nginx/default.prod.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
+  database:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: auren
+      MYSQL_USER: jojopok
+      MYSQL_PASSWORD: wild
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - database_data:/var/lib/mysql
+
+volumes:
+  database_data:
